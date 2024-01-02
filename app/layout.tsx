@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={poppins.className}>
         {' '}
         <main className='font-normal'>
-          {/* <Header /> */}
+          <Header />
           {children}
           <Footer />
         </main>

@@ -12,7 +12,7 @@ import Image from 'next/image'
 const Header = () => {
   //   const { darkTheme, setDarkTheme } = useContext(ThemeContext)
 
-  const { data: session } = useSession()
+  // const { data: session } = useSession()
 
   return (
     <header className='py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between'>
@@ -22,7 +22,7 @@ const Header = () => {
         </Link>
         <ul className='flex items-center ml-5'>
           <li className='flex items-center'>
-            {session?.user ? (
+            {/* {session?.user ? (
               <Link href={`/users/${session.user.id}`}>
                 {session.user.image ? (
                   <div className='w-10 h-10 rounded-full overflow-hidden'>
@@ -42,10 +42,13 @@ const Header = () => {
               <Link href='/auth'>
                 <FaUserCircle className='cursor-pointer' />
               </Link>
-            )}
+            )} */}
+            <Link href='/auth'>
+              <FaUserCircle className='cursor-pointer' />
+            </Link>
           </li>
           <li className='ml-2'>
-            {darkTheme ? (
+            {/* {darkTheme ? (
               <MdOutlineLightMode
                 className='cursor-pointer'
                 onClick={() => {
@@ -61,7 +64,14 @@ const Header = () => {
                   localStorage.setItem('hotel-theme', 'true')
                 }}
               />
-            )}
+            )} */}
+            <MdOutlineLightMode
+              className='cursor-pointer'
+              // onClick={() => {
+              //   setDarkTheme(false)
+              //   localStorage.removeItem('hotel-theme')
+              // }}
+            />
           </li>
         </ul>
       </div>
