@@ -1,16 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { useContext } from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { useSession } from 'next-auth/react'
 
-// import ThemeContext from '@/context/themeContext'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
 const Header = () => {
-  //   const { darkTheme, setDarkTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useTheme()
 
   // const { data: session } = useSession()
 
@@ -48,30 +47,21 @@ const Header = () => {
             </Link>
           </li>
           <li className='ml-2'>
-            {/* {darkTheme ? (
+            {theme === 'dark' ? (
               <MdOutlineLightMode
                 className='cursor-pointer'
                 onClick={() => {
-                  setDarkTheme(false)
-                  localStorage.removeItem('hotel-theme')
+                  setTheme('light')
                 }}
               />
             ) : (
               <MdDarkMode
                 className='cursor-pointer'
                 onClick={() => {
-                  setDarkTheme(true)
-                  localStorage.setItem('hotel-theme', 'true')
+                  setTheme('dark')
                 }}
               />
-            )} */}
-            <MdOutlineLightMode
-              className='cursor-pointer'
-              // onClick={() => {
-              //   setDarkTheme(false)
-              //   localStorage.removeItem('hotel-theme')
-              // }}
-            />
+            )}
           </li>
         </ul>
       </div>
