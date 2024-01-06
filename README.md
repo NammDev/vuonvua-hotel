@@ -12,4 +12,4 @@ This repository houses the code for a Next.js website showcasing your hotel, ena
 - **Admin dashboard:** Manage bookings, guest information, and hotel settings efficiently.
 - **Built with Next.js:** Enjoy lightning-fast performance, SEO benefits, and a delightful developer experience.
 - **Responsive design:** Seamlessly adapts to different screen sizes for optimal viewing on any device.
-- **Customizable:** Tailor the design and content to match your hotel's unique```
+- **Customizable:** Tailor the design and content to match your hotel unique```
