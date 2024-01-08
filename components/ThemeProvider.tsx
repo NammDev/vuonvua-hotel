@@ -5,7 +5,6 @@
 import { ThemeProvider } from 'next-themes'
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  // keep state here
   return (
     <ThemeProvider attribute='class'>
       <div className='min-h-screen'>
